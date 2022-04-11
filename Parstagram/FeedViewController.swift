@@ -38,9 +38,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return posts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         
         let post = posts[indexPath.row]
@@ -49,6 +50,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.usernameLabel.text  = user.username
         cell.captionLabel.text = post["caption"] as! String
         
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.photoView.af.setImage(withURL: url)
         return cell
         
     }
@@ -61,5 +67,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+    }
+    
 }
