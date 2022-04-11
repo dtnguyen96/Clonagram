@@ -95,35 +95,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="495" id="DGk-GC-aU1" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="495"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="497" translatesAutoresizingMaskIntoConstraints="NO" id="DGk-GC-aU1" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="497"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DGk-GC-aU1" id="807-Th-x54">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="495"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Christian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRR-EW-e8B">
-                                                    <rect key="frame" x="20" y="393" width="68" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRR-EW-e8B">
+                                                    <rect key="frame" x="8" y="466" width="205" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wow I love these photos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD5-Pj-cPR">
-                                                    <rect key="frame" x="106" y="393" width="280" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Wow I love these photos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD5-Pj-cPR">
+                                                    <rect key="frame" x="221" y="466" width="185" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NtP-GJ-XwT">
-                                                    <rect key="frame" x="28" y="11" width="358" height="360"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtP-GJ-XwT">
+                                                    <rect key="frame" x="8" y="8" width="398" height="450"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="NtP-GJ-XwT" secondAttribute="height" multiplier="199:225" id="jqI-z4-dy4"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JRR-EW-e8B" firstAttribute="top" secondItem="NtP-GJ-XwT" secondAttribute="bottom" constant="8" id="9SM-Vw-gd8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="NtP-GJ-XwT" secondAttribute="trailing" constant="8" id="YN5-LM-o8P"/>
-                                                <constraint firstItem="NtP-GJ-XwT" firstAttribute="top" secondItem="807-Th-x54" secondAttribute="topMargin" constant="8" id="bBM-dR-eEG"/>
-                                                <constraint firstItem="NtP-GJ-XwT" firstAttribute="leading" secondItem="807-Th-x54" secondAttribute="leadingMargin" constant="8" id="sY2-9d-uAg"/>
+                                                <constraint firstItem="DD5-Pj-cPR" firstAttribute="top" secondItem="NtP-GJ-XwT" secondAttribute="bottom" constant="8" id="DBm-bn-1nK"/>
+                                                <constraint firstItem="DD5-Pj-cPR" firstAttribute="leading" secondItem="JRR-EW-e8B" secondAttribute="trailing" constant="8" id="HGJ-aD-VlY"/>
+                                                <constraint firstItem="JRR-EW-e8B" firstAttribute="top" secondItem="NtP-GJ-XwT" secondAttribute="bottom" constant="8" id="MBS-tI-Piy"/>
+                                                <constraint firstItem="NtP-GJ-XwT" firstAttribute="leading" secondItem="807-Th-x54" secondAttribute="leading" constant="8" id="WGR-KV-Czg"/>
+                                                <constraint firstItem="NtP-GJ-XwT" firstAttribute="top" secondItem="807-Th-x54" secondAttribute="top" constant="8" id="dBD-8x-4Zd"/>
+                                                <constraint firstAttribute="bottom" secondItem="DD5-Pj-cPR" secondAttribute="bottom" constant="8" id="i15-QI-Pwv"/>
+                                                <constraint firstItem="JRR-EW-e8B" firstAttribute="leading" secondItem="807-Th-x54" secondAttribute="leading" constant="8" id="ndh-BO-9TI"/>
+                                                <constraint firstAttribute="trailing" secondItem="NtP-GJ-XwT" secondAttribute="trailing" constant="8" id="oXK-xS-NyZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="DD5-Pj-cPR" secondAttribute="trailing" constant="8" id="qF9-6A-eQZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -139,6 +147,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kr4-TJ-Y5Q">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="9wE-Ik-QtM">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="V6t-Cm-wti" id="5h4-SI-StW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="CT8-fe-EEa">
                             <connections>
                                 <segue destination="6xT-rU-7x8" kind="presentation" identifier="cameraSegue" id="VKT-Br-5Qa"/>
@@ -205,7 +218,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hdj-Ky-Mfq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yby-d4-xiX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="yby-d4-xiX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Qsv-5c-v4F">
